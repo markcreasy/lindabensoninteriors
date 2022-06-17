@@ -1,0 +1,33 @@
+.site-header{
+  width: 855px;
+  margin: auto;
+  text-align: center;
+}
+
+.site-header ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.site-header li{
+  float: left;
+  width:168px;
+  font-weight: bold;
+}
+
+.site-header a{
+  text-decoration: none;
+  color:#8c6239;
+}
+
+.site-header a:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.site-header a.active{
+  text-decoration: underline;
+}
