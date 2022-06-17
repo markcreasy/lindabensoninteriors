@@ -1,1 +1,5 @@
-const projects;
+const projects = [];
+
+
+
+module.exports = projects;

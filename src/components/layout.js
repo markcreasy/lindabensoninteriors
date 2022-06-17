@@ -5,7 +5,7 @@ import './layout.css'
 
 const Layout = ({ pageTitle, children }) => {
   return (
-    <div class="main-container">
+    <div className="main-container">
       <Header page={pageTitle} />
       <main>
         {children}

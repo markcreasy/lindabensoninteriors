@@ -6,7 +6,7 @@ import showcasePhoto from '../images/statelyHomes/LINDA_006-1.jpg'
 const IndexPage = () => {
   return (
     <Layout pageTitle="home">
-      <div class="showcase">
+      <div className="showcase">
           <img src={showcasePhoto} alt="Linda Benson Showcase" />
       </div>
     </Layout>
