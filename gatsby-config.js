@@ -4,7 +4,7 @@ module.exports = {
     siteUrl: `https://www.lindabensoninteriors.com`,
   },
   plugins: [
-    {
+    // {
     //   resolve: `gatsby-source-mysql`,
     //   options: {
     //     connectionDetails: {
