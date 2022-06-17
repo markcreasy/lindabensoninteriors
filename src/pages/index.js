@@ -5,7 +5,7 @@ import showcasePhoto from '../images/statelyHomes/LINDA_006-1.jpg'
 // markup
 const IndexPage = () => {
   return (
-    <Layout pageTitle="Home Page">
+    <Layout pageTitle="home">
       <div class="showcase">
           <img src={showcasePhoto} alt="Linda Benson Showcase" />
       </div>

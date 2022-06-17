@@ -1,11 +1,12 @@
 import * as React from 'react'
 import Header from './header.js'
 import Footer from './footer.js'
+import './layout.css'
 
 const Layout = ({ pageTitle, children }) => {
   return (
     <div class="main-container">
-      <Header />
+      <Header page={pageTitle} />
       <main>
         {children}
       </main>
