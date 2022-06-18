@@ -1,6 +1,6 @@
 import * as React from "react"
 import Layout from '../components/layout'
-import showcasePhoto from '../images/statelyHomes/LINDA_006-1.jpg'
+import showcasePhoto from '../images/portfolio/statelyHomes/LINDA_006-1.jpg'
 
 // markup
 const IndexPage = () => {

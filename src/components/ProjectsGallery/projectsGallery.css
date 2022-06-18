@@ -1,9 +1,32 @@
+#projectsArea{
+color:#876742;
+text-align:center;
+min-width:210px;
+}
+#projectsArea h1{
+font-size:1em;
+}
+#projectsArea ul{
+list-style-type:none;
+margin:0px;
+padding:0px;
+}
+#projectsArea li{
+padding:3px;
+}
+#projectsArea li:hover{
+text-decoration: underline;
+cursor:pointer;
+}
+
 .thumbWrapper{
   display: flex;
   flex-flow: row wrap;
   width: 450px;
   justify-content: flex-end;
+  align-content: flex-start;
   gap: 10px;
+  max-height: 400px;
 }
 
 .thumb{
@@ -30,6 +53,13 @@
 #bigPic{
 flex-grow: 2;
 height:100%;
-border:3px solid gray;
 margin:10px;
+}
+
+#bigPic .gatsby-image-wrapper{
+  border:3px solid gray;
+}
+
+#bigPic img{
+  max-height: 420px;
 }

@@ -1,4 +1,4 @@
-import * as React from "react"
+import React, { useState } from 'react';
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import './projectsGallery.css'
 
@@ -10,7 +10,7 @@ const ProjectsGallery = ({data}) => {
     {dir:"MansionInMay",name:"Mansion in May 2012"},
     {dir:"townRetreat",name:"Hunterdon Retreat"},
     {dir:"rumson",name:"Rumson Family Room"},
-    {dir:"rumsonHallway",name:"Rumson Hallway"},
+    {dir:"rumsonHallway1",name:"Rumson Hallway"},
     {dir:"rumsonGuest",name:"Rumson Guest Room 1"},
     {dir:"rumsonBed",name:"Rumson Guest Room 2"},
     {dir:"barclayPoolhouse",name:"Tewksbury Poolhouse"},
@@ -28,11 +28,15 @@ const ProjectsGallery = ({data}) => {
     }
   });
 
-  const currentProject = projects[0].name;
+  // current project state tracking
+  const [currentProject, setCurrentProject] = useState(projects[0]);
+  // current photo state tracking
+  const [currentPhoto, setCurrentPhoto] = useState(getImage(currentProject.photos[0]));
+
 
   function ProjectList(){
     const listItems = projects.map((project) =>
-      <li key={project.name}>{project.name}</li>
+      <li key={project.name} onClick={()=>updateProject(project.name)}>{project.name}</li>
     );
     return (
       <ul>{listItems}</ul>
@@ -40,33 +44,30 @@ const ProjectsGallery = ({data}) => {
   }
 
   function ProjectImages(){
-    const project = projects.filter(project => project.name === currentProject)[0];
-
-    return project.photos.map((photo) => {
+    return currentProject.photos.map((photo) => {
         const image = getImage(photo);
-
-        return (<GatsbyImage key={photo.relativePath} className="thumb" image={image} alt={project.name} />);
+        return (<div key={photo.relativePath} onClick={() => setCurrentPhoto(image)}><GatsbyImage className="thumb" image={image} alt={currentProject.name} /></div>);
     })
   }
 
-  function PhotoFeature(){
-    const currentPhoto = projects[0].photos[0];
-    const image = getImage(currentPhoto);
-    return (<GatsbyImage key='featurePhoto' image={image} alt={projects[0].name} />);
+  function updateProject(projectName){
+    const project = projects.filter(project => project.name === projectName)[0];
+    setCurrentProject(project);
+    setCurrentPhoto(getImage(project.photos[0]));
   }
+
 
   return (
     <div id="galleryContentWrapper">
-
       <div id="projectsArea">
           <h3 id="picTitle">Projects</h3>
           <ProjectList />
       </div>
       <div id="bigPic">
-        <PhotoFeature />
+        <GatsbyImage key='featurePhoto' image={currentPhoto} alt={projects[0].name} />
       </div>
       <div className="thumbWrapper">
-        <ProjectImages />
+        <ProjectImages key='projectImages' />
       </div>
     </div>
   )

@@ -83,28 +83,6 @@ color:#8c6239;
 width:350px;
 }
 
-#projectsArea{
-float:left;
-color:#876742;
-text-align:center;
-}
-#projectsArea h1{
-font-size:1em;
-}
-#projectsArea ul{
-list-style-type:none;
-margin:0px;
-padding:0px;
-float:left;
-}
-#projectsArea li{
-padding:3px;
-}
-#projectsArea li:hover{
-text-decoration: underline;
-cursor:pointer;
-}
-
 #contactPic{
 float:right;
 width:400px;

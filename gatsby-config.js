@@ -5,13 +5,24 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-image`,
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          formats: [`auto`, `webp`],
+          placeholder: `dominantColor`,
+          quality: 100,
+          breakpoints: [1080, 1366, 1920],
+          backgroundColor: `transparent`,
+        }
+      }
+    },
     `gatsby-transformer-sharp`,
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/src/images/portfolio`,
       }
     },
     // {

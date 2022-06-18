@@ -14,7 +14,7 @@ const Portfolio = ({ data }) => {
   )
 }
 
-export const query = graphql `query MyQuery {
+export const query = graphql `query getProjectImages {
   allFile {
     nodes {
       relativeDirectory
