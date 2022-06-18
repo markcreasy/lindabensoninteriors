@@ -105,32 +105,6 @@ text-decoration: underline;
 cursor:pointer;
 }
 
-#bigPic{
-width:350px;
-height:100%;
-float:right;
-}
-#bigPic img{
-border:3px solid gray;
-}
-
-.thumbs{
-width:250px;
-float:right;
-}
-.thumbs ul{
-list-style-type:none;
-}
-.thumbs img{
-width:90px;
-height:90px;
-padding:5px;
-float:left;
-}
-.thumbs img:hover{
-cursor:pointer;
-}
-
 #contactPic{
 float:right;
 width:400px;

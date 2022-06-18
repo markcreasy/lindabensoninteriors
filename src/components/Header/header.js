@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
-import headerImg from '../images/LindaBensonHeader.png'
+import headerImg from '../../images/LindaBensonHeader.png'
 import './header.css'
 
 const Header = ({page}) => {

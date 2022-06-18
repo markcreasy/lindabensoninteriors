@@ -1,0 +1,35 @@
+.thumbWrapper{
+  display: flex;
+  flex-flow: row wrap;
+  width: 450px;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.thumb{
+  width: 90px;
+  height: 90px;
+}
+
+.thumb:hover{
+  cursor: pointer;
+}
+
+#contentWrapper{
+  display: flex;
+}
+
+#galleryContentWrapper{
+  width:1200px;
+  display: flex;
+  margin-top: 25px;
+}
+
+.main-container{width:1200px}
+
+#bigPic{
+flex-grow: 2;
+height:100%;
+border:3px solid gray;
+margin:10px;
+}
