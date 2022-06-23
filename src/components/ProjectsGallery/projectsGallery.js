@@ -46,17 +46,15 @@ const ProjectsGallery = ({data}) => {
 
   function ProjectList(){
     const listItems = projects.map((project) =>
-      <li key={project.name} onClick={()=>updateProject(project.name)} className={activeProject(project.name)}>{project.name}</li>
+      <button key={project.name} onClick={()=>updateProject(project.name)} className={activeProject(project.name)}>{project.name}</button>
     );
-    return (
-      <ul>{listItems}</ul>
-    )
+    return listItems;
   }
 
   function ProjectImages(){
     return currentProject.photos.map((photo) => {
         const image = getImage(photo);
-        return (<div key={photo.relativePath} onClick={() => setCurrentPhoto(image)}><GatsbyImage className="thumb" image={image} alt={currentProject.name} /></div>);
+        return (<button key={photo.relativePath} onClick={() => setCurrentPhoto(image)}><GatsbyImage className="thumb" image={image} alt={currentProject.name} /></button>);
     })
   }
 
