@@ -34,9 +34,7 @@ const ProjectsGallery = ({data}) => {
   const [currentPhoto, setCurrentPhoto] = useState(getImage(currentProject.photos[0]));
 
   const activeProject = (listItem) => {
-    console.log(listItem, currentProject.name);
     if(currentProject.name === listItem){
-      console.log("match");
       return "active"
     }else{
       return "";
