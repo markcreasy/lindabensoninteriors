@@ -9,7 +9,7 @@ const ProjectsGallery = ({data}) => {
     {dir:"statelyHomes",name:"Stately Homes by the Sea 2013"},
     {dir:"MansionInMay",name:"Mansion in May 2012"},
     {dir:"townRetreat",name:"Hunterdon Retreat"},
-    {dir:"rumson",name:"Rumson Family Room"},
+    {dir:"rumsonTv",name:"Rumson Family Room"},
     {dir:"rumsonHallway1",name:"Rumson Hallway"},
     {dir:"rumsonGuest",name:"Rumson Guest Room 1"},
     {dir:"rumsonBed",name:"Rumson Guest Room 2"},
@@ -33,10 +33,20 @@ const ProjectsGallery = ({data}) => {
   // current photo state tracking
   const [currentPhoto, setCurrentPhoto] = useState(getImage(currentProject.photos[0]));
 
+  const activeProject = (listItem) => {
+    console.log(listItem, currentProject.name);
+    if(currentProject.name === listItem){
+      console.log("match");
+      return "active"
+    }else{
+      return "";
+    }
+  }
+
 
   function ProjectList(){
     const listItems = projects.map((project) =>
-      <li key={project.name} onClick={()=>updateProject(project.name)}>{project.name}</li>
+      <li key={project.name} onClick={()=>updateProject(project.name)} className={activeProject(project.name)}>{project.name}</li>
     );
     return (
       <ul>{listItems}</ul>

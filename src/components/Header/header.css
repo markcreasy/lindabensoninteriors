@@ -18,6 +18,10 @@
   font-weight: bold;
 }
 
+.site-header .active{
+  text-decoration: underline;
+}
+
 .site-header a{
   text-decoration: none;
   color:#8c6239;
@@ -26,8 +30,4 @@
 .site-header a:hover{
   text-decoration: underline;
   cursor: pointer;
-}
-
-.site-header a.active{
-  text-decoration: underline;
 }

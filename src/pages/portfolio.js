@@ -6,7 +6,7 @@ import { graphql } from 'gatsby'
 const Portfolio = ({ data }) => {
 
   return (
-    <Layout pageTitle="porfolio">
+    <Layout pageTitle="portfolio">
 
       <ProjectsGallery data={data}/>
 
