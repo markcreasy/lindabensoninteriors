@@ -42,10 +42,6 @@ cursor:pointer;
   cursor: pointer;
 }
 
-#contentWrapper{
-  display: flex;
-}
-
 #galleryContentWrapper{
   width:1200px;
   display: flex;

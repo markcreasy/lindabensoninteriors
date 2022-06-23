@@ -3,7 +3,7 @@ import Layout from '../components/layout'
 import ProjectsGallery from '../components/ProjectsGallery/projectsGallery.js'
 import { graphql } from 'gatsby'
 
-const Portfolio = ({ data }) => {
+const PortfolioPage = ({ data }) => {
 
   return (
     <Layout pageTitle="portfolio">
@@ -27,4 +27,4 @@ export const query = graphql `query getProjectImages {
 }
 `
 
-export default Portfolio
+export default PortfolioPage

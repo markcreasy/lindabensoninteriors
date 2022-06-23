@@ -32,15 +32,15 @@ const AboutPage = () => {
           <p>
               Linda has worked on projects in Manhattan; Park Slope, Brooklyn; Darien, Connecticut; Annandale, Bedminster, Morristown, Oldwick, Pottersville, Short Hills, Summit, South Mantalokin, Tewksbury, Chatham, Rumson, and Little Silver New Jersey. Linda has designed Location &apos;05 in Manhattan – four lofts that cater to the Film &amp; Photography Industry. The styles range from New England Country Home to Midcentury and from Beach House to Contemporary. They are used by major publications, advertising campaigns, celebrity interviews, television shows, and film clients such as House Beautiful, Better Homes &amp; Garden, Real Simple, Martha Stewart, etc. She has also designed event planning spaces in Manhattan.
           </p>
-          <p>
+          <div>
             Show Houses:
             <ul>
               <li>-Mansion In May 2012 - Pippa Middleton's Private Office</li>
               <li>-Stately Homes By The Sea 2013 - Something's Gotta Give Sunroom</li>
               <li>- Mansion In May 2014 - Grey Gardens' Great Room</li>
             </ul>
-          </p>
-          <p><img src={asidLogo} alt="American Society of Interior Designers"/></p>
+          </div>
+          <div><img src={asidLogo} alt="American Society of Interior Designers"/></div>
       </div>
     </div>
     </Layout>

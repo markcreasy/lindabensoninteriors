@@ -24,19 +24,24 @@ background-color:#bfd4d5;
   margin-top:15px;
 }
 
-#contentWrapper{
-margin:auto;
-height:390px;
-width:100%;
-background-color:#bfd4d5;
+.aboutWrapper{
+  width:750px;
+  margin-top: 20px;
+  display: flex;
+  gap: 40px;
 }
 
-.aboutWrapper{
-  height:1200px !important;
-  width:750px !important;
+#textArea{
   text-align: left;
   font-size: 1em;
   line-height: 1.4;
+}
+
+#textArea p{
+  text-indent: 30px;
+}
+#textArea img{
+  margin-top:30px;
 }
 
 .aboutWrapper ul{
@@ -70,149 +75,89 @@ border:3px solid gray;
 }
 
 #textArea{
-height:100%;
-width:400px;
-float:right;
-margin:auto;
 padding-top:10px;
-background-color:#bfd4d5;
-overflow:hidden;
 color:#8c6239;
 }
-#textArea h3{
-width:350px;
-}
 
-#contactPic{
-float:right;
-width:400px;
-}
-#contactPic img{
-width:450px;
-position:relative;
-top:15px;
-right:50px;
-border:3px solid gray;
-}
-
-#bioPic{
-float:left;
-width:300px;
-}
 #bioPic img{
-width:100%;
+width:300px;
 margin-top:30px;
 border:3px solid gray;
 }
 
+main{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
 .pressArticle{
-	width:900px;
-	margin-top:20px;
-	margin-left:auto;
-	margin-right:auto;
-	margin-bottom:80px;
+	display: flex;
 	color:#8c6239;
-	text-indent:30px;
+  width: 900px;
+  margin-top: 40px;
+  line-height: 1.4;
 }
 
-#tft{
-	float:left;
-	margin-top:20px;
-	margin-right:15px;
-	border:2px solid gray;
-}
-
-#njLogo{
-	float:left;
-	border:2px solid gray;
-	margin-top:20px;
-	margin-right:15px;
-}
-
-#pjLogo{
-	float:left;
-	border:2px solid gray;
-	margin-top: 20px;
-	margin-right: 15px;
-}
-
-.pressLink{
-	float:right;
-}
-
-.pressLink img{
-	width:20px;
-	margin-left:5px;
-	position:relative;
-	top:3px;
-}
-
-.pressLink a{
-	font-weight:bold;
-	text-decoration:none;
+.pressArticle div{
+  flex-grow: 1;
 }
 
 .pressArticle p{
-	margin:auto;
+  flex-grow: 6;
+  text-align: left;
+  margin-left: 20px;
+  text-indent: 40px;
 }
 
-#shsLogo{
-	text-align:center;
-	border:2px solid gray;
-	background-color:white;
-	width:277px;
-	font-family:'Nunito',arial,serif;text-transform:uppercase;font-weight:bold;
-	color:#3953A2;
-	padding-top:15px;
-	padding-bottom:15px;
-	margin-right:15px;
-	float:left;
-	text-indent:0px;
-}
-
-#shsLogo:hover{
-	cursor: pointer;
-}
-
-#pinCover{
-	width:200px;
-	height:200px;
-	border-radius:100px;
-	position:absolute;
-	left:575px;
-	z-index:10;
-	visibility: hidden;
-}
-
-#pinCover:hover{
-	background: rgba(0,0,0,0.8);
-	cursor: pointer;
-}
-
-#pinterest img{
-	margin:auto;
-	display:block;
-	width:200px;
-}
-
-.articlePhoto{
-	float:left;
-	height:140px;
-	border:2px solid gray;
-	margin-right:20px;
-	margin-top:20px;
-	position:relative;
-}
-
-.shsPhoto{
-	float:left;
-	height:140px;
-	border:2px solid gray;
-	margin-right:5px;
-	margin-top:20px;
-	position:relative;
+.pressLink{
+  text-align: right;
 }
 
 .articlePhotos{
-	width:100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.articlePhotos img{
+  width:125px;
+  height:125px;
+}
+
+#traditionalHomeImg{
+  width:200px;
+  margin-top:25px;
+}
+
+#pjLogo, #tft, #njLogo{
+  margin-top:22px;
+}
+
+#shsLogo{
+  text-align: center;
+  border: 2px solid gray;
+  background-color: white;
+  font-family: arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #3953A2;
+  padding: 15px 50px;
+  font-size: 30px;
+}
+
+.contact-container{
+  display:flex;
+  flex-direction: row;
+  gap: 100px;
+  margin: 70px 0 30px 0;
+}
+
+#contactPic img{
+  width:450px;
+  border: 3px solid gray;
 }
