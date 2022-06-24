@@ -1,9 +1,11 @@
 {
   "name": "linda-benson-interiors",
   "version": "1.0.0",
-  "private": true,
   "description": "linda-benson-interiors",
   "author": "Mark Creasy",
+  "engines": {
+    "node": "16.x"
+  },
   "keywords": [
     "gatsby"
   ],
