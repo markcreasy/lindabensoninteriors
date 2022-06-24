@@ -5,20 +5,20 @@ import './projectsGallery.css'
 const ProjectsGallery = ({data}) => {
 
   const projectNames = [
-    {dir:"mim2015",name:"Mansion in May 2014"},
-    {dir:"statelyHomes",name:"Stately Homes by the Sea 2013"},
-    {dir:"MansionInMay",name:"Mansion in May 2012"},
-    {dir:"townRetreat",name:"Hunterdon Retreat"},
-    {dir:"rumsonTv",name:"Rumson Family Room"},
-    {dir:"rumsonHallway1",name:"Rumson Hallway"},
-    {dir:"rumsonGuest",name:"Rumson Guest Room 1"},
-    {dir:"rumsonBed",name:"Rumson Guest Room 2"},
-    {dir:"barclayPoolhouse",name:"Tewksbury Poolhouse"},
-    {dir:"powderRoom",name:"Bathrooms/Powder Rooms"},
-    {dir:"asburyOffice",name:"Asbury Office"},
-    {dir:"weekendOffice",name:"Weekend Office"},
-    {dir:"gentlemensBar",name:"Gentelmen's Bar"},
-    {dir:"townGym",name:"Oldwick Gym"}
+    {dir:"portfolio/mim2015",name:"Mansion in May 2014"},
+    {dir:"portfolio/statelyHomes",name:"Stately Homes by the Sea 2013"},
+    {dir:"portfolio/MansionInMay",name:"Mansion in May 2012"},
+    {dir:"portfolio/townRetreat",name:"Hunterdon Retreat"},
+    {dir:"portfolio/rumsonTv",name:"Rumson Family Room"},
+    {dir:"portfolio/rumsonHallway1",name:"Rumson Hallway"},
+    {dir:"portfolio/rumsonGuest",name:"Rumson Guest Room 1"},
+    {dir:"portfolio/rumsonBed",name:"Rumson Guest Room 2"},
+    {dir:"portfolio/barclayPoolhouse",name:"Tewksbury Poolhouse"},
+    {dir:"portfolio/powderRoom",name:"Bathrooms/Powder Rooms"},
+    {dir:"portfolio/asburyOffice",name:"Asbury Office"},
+    {dir:"portfolio/weekendOffice",name:"Weekend Office"},
+    {dir:"portfolio/gentlemensBar",name:"Gentelmen's Bar"},
+    {dir:"portfolio/townGym",name:"Oldwick Gym"}
   ];
 
   const projects = projectNames.map( (project) => {

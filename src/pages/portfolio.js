@@ -15,7 +15,7 @@ const PortfolioPage = ({ data }) => {
 }
 
 export const query = graphql `query getProjectImages {
-  allFile {
+  allFile(filter: {ext: {nin: ".gif"}}) {
     nodes {
       relativeDirectory
       relativePath
