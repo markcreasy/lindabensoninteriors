@@ -8,7 +8,7 @@ const Contact = () => {
   return (
     <Layout pageTitle="contact">
 
-    <div class="contact-container">
+    <div className="contact-container">
 
       <div id="contactInfo">
           <h2>Contact Information</h2>

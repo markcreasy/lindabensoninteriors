@@ -7,7 +7,7 @@ import linda2 from '../images/about/pic2.jpg'
 const AboutPage = () => {
   return (
     <Layout pageTitle="about">
-    <div id="contentWrapper" class="aboutWrapper">
+    <div id="contentWrapper" className="aboutWrapper">
       <div id="bioPic">
           <img src={linda1} alt="Linda"/>
           <img src={linda2} alt="Linda's Work"/>
