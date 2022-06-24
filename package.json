@@ -4,7 +4,8 @@
   "description": "linda-benson-interiors",
   "author": "Mark Creasy",
   "engines": {
-    "node": "16.x"
+    "node": "16.x",
+    "npm": "8.x"
   },
   "keywords": [
     "gatsby"
