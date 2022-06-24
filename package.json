@@ -15,7 +15,8 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "heroku-postbuild": "gatsby build"
   },
   "dependencies": {
     "gatsby": "^4.16.0",
