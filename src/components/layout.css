@@ -77,10 +77,15 @@ padding-top:10px;
 color:#8c6239;
 }
 
-#bioPic img{
+#bioPic .gatsby-image-wrapper{
 width:300px;
 margin-top:30px;
 border:3px solid gray;
+}
+
+.asidLogo img{
+  width:100%;
+  height:auto;
 }
 
 main{
@@ -97,10 +102,6 @@ main{
   width: 900px;
   margin-top: 40px;
   line-height: 1.4;
-}
-
-.pressArticle div{
-  flex-grow: 1;
 }
 
 .pressArticle p{
@@ -122,7 +123,7 @@ main{
   margin-top: 15px;
 }
 
-.articlePhotos img{
+.articlePhotos .gatsby-image-wrapper{
   width:125px;
   height:125px;
 }
@@ -132,8 +133,10 @@ main{
   margin-top:25px;
 }
 
-#pjLogo, #tft, #njLogo{
+.pressPhoto{
   margin-top:22px;
+  border: 2px solid gray;
+  width:228px;
 }
 
 #shsLogo{

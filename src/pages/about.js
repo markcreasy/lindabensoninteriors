@@ -1,16 +1,16 @@
 import * as React from 'react'
 import Layout from '../components/layout'
-import asidLogo from '../images/about/asidlogo.png'
-import linda1 from '../images/about/pic1.jpg'
-import linda2 from '../images/about/pic2.jpg'
+import { graphql } from 'gatsby'
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-const AboutPage = () => {
+
+const AboutPage = ({data}) => {
   return (
     <Layout pageTitle="about">
     <div id="contentWrapper" className="aboutWrapper">
       <div id="bioPic">
-          <img src={linda1} alt="Linda"/>
-          <img src={linda2} alt="Linda's Work"/>
+          <GatsbyImage image={getImage(data.linda1.childImageSharp)} alt="Linda"/>
+          <GatsbyImage image={getImage(data.linda2.childImageSharp)} alt="Linda's Work'"/>
       </div>
 
       <div id="textArea">
@@ -40,10 +40,31 @@ const AboutPage = () => {
               <li>- Mansion In May 2014 - Grey Gardens' Great Room</li>
             </ul>
           </div>
-          <div><img src={asidLogo} alt="American Society of Interior Designers"/></div>
+          <div class="asidLogo"><GatsbyImage image={getImage(data.asidLogo.childImageSharp)} alt="American Society of Interior Designers"/></div>
       </div>
     </div>
     </Layout>
   )
 }
+
+export const query = graphql`
+  query {
+    asidLogo: file(relativePath: { eq: "about/asidlogo.png" }) {
+      childImageSharp {
+        gatsbyImageData
+      }
+    }
+    linda1: file(relativePath: { eq: "about/pic1.jpg" }) {
+      childImageSharp {
+        gatsbyImageData
+      }
+    }
+    linda2: file(relativePath: { eq: "about/pic2.jpg" }) {
+      childImageSharp {
+        gatsbyImageData
+      }
+    }
+  }
+`
+
 export default AboutPage

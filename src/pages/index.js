@@ -1,16 +1,27 @@
 import * as React from "react"
 import Layout from '../components/layout'
-import showcasePhoto from '../images/portfolio/statelyHomes/LINDA_006-1.jpg'
+import { graphql } from 'gatsby'
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 // markup
-const IndexPage = () => {
+const IndexPage = ({data}) => {
   return (
     <Layout pageTitle="home">
       <div className="showcase">
-          <img src={showcasePhoto} alt="Linda Benson Showcase" />
+          <GatsbyImage image={getImage(data.showcasePhoto.childImageSharp)} alt="Linda Benson Showcase"/>
       </div>
     </Layout>
   )
 }
+
+export const query = graphql`
+  query {
+    showcasePhoto: file(relativePath: { eq: "portfolio/statelyHomes/LINDA_006-1.jpg" }) {
+      childImageSharp {
+        gatsbyImageData
+      }
+    }
+  }
+`
 
 export default IndexPage

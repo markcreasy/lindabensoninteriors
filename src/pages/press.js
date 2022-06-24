@@ -1,33 +1,28 @@
 import * as React from 'react'
 import Layout from '../components/layout'
-import traditionalHomes from '../images/portfolio/statelyHomes/LINDA_006-1.jpg'
-import kravet from '../images/logos/kravet.jpg'
-import pjImg from '../images/logos/pj.gif'
-import shs1 from "../images/articles/shs1.jpg"
-import shs2 from "../images/articles/shs2.jpg"
-import shs3 from "../images/articles/shs3.jpg"
-import shs4 from "../images/articles/shs4.jpg"
-import shs5 from "../images/articles/shs5.jpg"
-import tftImg from "../images/logos/tipsfromtown.gif"
-import tft1 from "../images/articles/tft1.jpg"
-import tft2 from "../images/articles/pippas-office.jpg"
-import njImg from "../images/logos/nj.gif"
+import { graphql } from 'gatsby'
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-const PressPage = () => {
+const PressPage = ({data}) => {
+  console.log(data);
   return (
     <Layout pageTitle="press">
       <div className="pressArticle">
-        <div><img id="traditionalHomeImg" src={traditionalHomes} alt="Stately Homes By The Sea"/></div>
+        <div>
+          <GatsbyImage className="pressPhoto" image={getImage(data.traditionalHomes.childImageSharp)} alt="Stately Homes By The Sea"/>
+        </div>
         <div>
           <p id="traditionalHome">
-             Linda was recently featured in an edition of Traditional Home Magaizine. As a lover of layering, Linda Benson had no problem adding texture to the sunroom. She started by installing latticework and wood-trim moldings over some of the existing brick wall. Natural materials—note the bamboo shades, wicker chairs, and sisal rug—keep to the coastal theme. Get the full article at <a href="http://www.traditionalhome.com/design/showhouses/stately-homes-sea-designer-showhouse?page=2">Tradition Home's Website</a>, or pick up a copy of Tradition Home Magazine. Please see the portfolio section for a photo gallery of Linda's work for the Stately Homes By The Sea showhouse.
+             Linda was recently featured in an edition of Traditional Home Magaizine. As a lover of layering, Linda Benson had no problem adding texture to the sunroom. She started by installing latticework and wood-trim moldings over some of the existing brick wall. Natural materials—note the bamboo shades, wicker chairs, and sisal rug—keep to the coastal theme. Get the full article at <a href="http://www.traditionalhome.com/design/showhouses/stately-homes-sea-designer-showhouse?page=2">Traditional Home's Website</a>, or pick up a copy of Tradition Home Magazine. Please see the portfolio section for a photo gallery of Linda's work for the Stately Homes By The Sea showhouse.
           </p>
           <div className="pressLink"><a href="http://www.traditionalhome.com/design/showhouses/stately-homes-sea-designer-showhouse?page=2">Read Full Article</a></div>
         </div>
      </div>
 
      <div className="pressArticle">
-      <div><img id="njLogo" src={kravet} alt="kravet.com"/></div>
+      <div>
+        <GatsbyImage className="pressPhoto" image={getImage(data.kravet.childImageSharp)} alt="kravet.com"/>
+      </div>
       <div>
         <p id="kravetP">
            Kravet and Lee Jofa have featured Linda's work for "The Sunroom" at the Stately Homes By The Sea 2013 Showhouse and displayed it on their website in their DesignShare Photo Gallery. All of the fabrics in the room came from both Kravet and Lee Jofa. All of these beautiful fabrics showcased were either linen or linen/cotton. As you can see, these fabrics lent an updated-classic look and freshness to her Sunroom.   </p>
@@ -36,7 +31,9 @@ const PressPage = () => {
      </div>
 
      <div className="pressArticle">
-      <div><img id="pjLogo" src={pjImg} alt="phillipjeffries.com"/></div>
+      <div>
+        <GatsbyImage className="pressPhoto" image={getImage(data.pjImg.childImageSharp)} alt="phillipjeffries.com"/>
+      </div>
       <div>
         <p>
           Phillip Jeffries, the World's leader in Natural, Textured and Specialty Wallcoverings has featured Linda on their site for her use of their Extra Fine Arrowroot Wallcovering in her room at The Mansion In May Showhouse in 2012.
@@ -55,17 +52,19 @@ const PressPage = () => {
          </p>
          <div className="pressLink"><a href="http://www.tagsellit.com/second-hand-social/decorating-on-a-dime-repurposing-for-any-occasion/" target="_blank" rel="noopener noreferrer">Read Full Article</a></div>
          <div className="articlePhotos">
-             <img src={shs1} className="shsPhoto" alt="Stately Homes Article Photography"/>
-             <img src={shs2} className="shsPhoto" alt="Stately Homes Article Photography"/>
-             <img src={shs3} className="shsPhoto" alt="Stately Homes Article Photography"/>
-             <img src={shs4} className="shsPhoto" alt="Stately Homes Article Photography"/>
-             <img src={shs5} className="shsPhoto" alt="Stately Homes Article Photography"/>
+             <GatsbyImage image={getImage(data.shs1.childImageSharp)} alt="Stately Homes Article Photography"/>
+             <GatsbyImage image={getImage(data.shs2.childImageSharp)} alt="Stately Homes Article Photography"/>
+             <GatsbyImage image={getImage(data.shs3.childImageSharp)} alt="Stately Homes Article Photography"/>
+             <GatsbyImage image={getImage(data.shs4.childImageSharp)} alt="Stately Homes Article Photography"/>
+             <GatsbyImage image={getImage(data.shs5.childImageSharp)} alt="Stately Homes Article Photography"/>
          </div>
       </div>
      </div>
 
      <div className="pressArticle">
-      <div><img id="tft" src={tftImg} alt="Tips From Town"/></div>
+      <div>
+        <GatsbyImage className="pressPhoto" image={getImage(data.tftImg.childImageSharp)} alt="Tips From Town Logo"/>
+      </div>
       <div>
          <p>
              Glynallyn, the star of this years Mansion in May Designer Show House, was inspired by an English Tudor manor built in 1481. Stained glass windows, stone arches, gargoyles, a slate roof and brick walls make this castle an ideal decorating show house. Residing on 7.5 acres in Convent Station, NJ, was constructed in 1913 by George Marshall Allen, a New York businessman. Mansion in May designers creatively and skillfully incorporated the castle’s rich architecture with their own decorating themes. The results were stunning.
@@ -75,14 +74,16 @@ const PressPage = () => {
          </p>
          <div className="pressLink"><a href="http://tipsfromtown.com/2012/06/15/new-decor-meets-old-castle/" target="_blank" rel="noopener noreferrer">Read Full Article</a></div>
          <div className="articlePhotos">
-             <img src={tft1} className="articlePhoto" alt="Tips From Town Article Photography"/>
-             <img src={tft2} className="articlePhoto" alt="Tips From Town Article Photography"/>
+             <GatsbyImage image={getImage(data.tft1.childImageSharp)} alt="Tips From Town Article Photograph"/>
+             <GatsbyImage image={getImage(data.tft2.childImageSharp)} alt="Tips From Town Article Photograph"/>
          </div>
       </div>
      </div>
 
      <div className="pressArticle">
-      <div><img id="njLogo" src={njImg} alt="NJ.com"/></div>
+      <div>
+        <GatsbyImage className="pressPhoto" image={getImage(data.njImg.childImageSharp)} alt="Nj.com logo"/>
+      </div>
       <div>
          <p>
              The 2012 Mansion In May Designer Showhouse and Gardens will open its doors on May 1, offering lucky visitors a chance to tour the historic Glynallyn Castle in Morristown. The Mansion will be open from May 1 - May 31. Built between 1913 -1917 and listed on the National Register of Historic Places, Glynallyn will be brought back to its original grandeur by 60 of the area's top interior and landscape designers.
@@ -96,4 +97,70 @@ const PressPage = () => {
     </Layout>
   )
 }
+
+export const query = graphql`
+  query {
+    traditionalHomes: file(relativePath: { eq: "portfolio/statelyHomes/LINDA_006-1.jpg" }) {
+      childImageSharp {
+        gatsbyImageData
+      }
+    }
+    kravet: file(relativePath: { eq: "logos/kravet.jpg" }) {
+      childImageSharp {
+        gatsbyImageData
+      }
+    }
+    pjImg: file(relativePath: { eq: "logos/pj.jpg" }) {
+      childImageSharp {
+        gatsbyImageData
+      }
+    }
+    shs1: file(relativePath: { eq: "articles/shs1.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(height: 125, width: 125)
+      }
+    }
+    shs2: file(relativePath: { eq: "articles/shs2.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(height: 125, width: 125)
+      }
+    }
+    shs3: file(relativePath: { eq: "articles/shs3.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(height: 125, width: 125)
+      }
+    }
+    shs4: file(relativePath: { eq: "articles/shs1.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(height: 125, width: 125)
+      }
+    }
+    shs5: file(relativePath: { eq: "articles/shs5.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(height: 125, width: 125)
+      }
+    }
+    tft1: file(relativePath: { eq: "articles/tft1.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(height: 125, width: 125)
+      }
+    }
+    tft2: file(relativePath: { eq: "articles/pippas-office.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(height: 125, width: 125)
+      }
+    }
+    tftImg: file(relativePath: { eq: "logos/tipsfromtown.jpg" }) {
+      childImageSharp {
+        gatsbyImageData
+      }
+    }
+    njImg: file(relativePath: { eq: "logos/nj.jpg" }) {
+      childImageSharp {
+        gatsbyImageData
+      }
+    }
+  }
+`
+
 export default PressPage
