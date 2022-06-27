@@ -42,4 +42,4 @@ export const query = graphql`
   }
 `
 
-export default Contact
+export default ContactPage
