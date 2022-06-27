@@ -5,8 +5,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 // markup
 const IndexPage = ({data}) => {
-  console.log("index debug");
-  console.log(data);
+  
   return (
     <Layout pageTitle="home">
       <div className="showcase">

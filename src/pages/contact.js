@@ -4,8 +4,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Layout from '../components/layout'
 
 const ContactPage = ({data}) => {
-  console.log("contact debug");
-  console.log(data);
+
   return (
     <Layout pageTitle="contact">
 
