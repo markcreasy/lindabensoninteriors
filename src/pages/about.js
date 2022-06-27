@@ -42,7 +42,7 @@ const AboutPage = ({data}) => {
               <li>- Mansion In May 2014 - Grey Gardens' Great Room</li>
             </ul>
           </div>
-          <div class="asidLogo"><GatsbyImage image={getImage(data.asidLogo.childImageSharp)} alt="American Society of Interior Designers"/></div>
+          <div className="asidLogo"><GatsbyImage image={getImage(data.asidLogo.childImageSharp)} alt="American Society of Interior Designers"/></div>
       </div>
     </div>
     </Layout>
