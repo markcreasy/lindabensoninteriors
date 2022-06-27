@@ -43,6 +43,7 @@ module.exports = {
         crossOrigin: `use-credentials`,
       },
     },
+    `gatsby-plugin-react-helmet`
     // {
     //   resolve: `gatsby-source-mysql`,
     //   options: {

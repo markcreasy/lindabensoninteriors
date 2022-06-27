@@ -1,13 +1,21 @@
 import * as React from 'react'
+import { Helmet } from "react-helmet"
 import Layout from '../components/layout'
 import { graphql } from 'gatsby'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 
 const AboutPage = ({data}) => {
-  
+
   return (
     <Layout pageTitle="about">
+    <Helmet>
+      <html lang="en" amp />
+      <meta charSet="utf-8" />
+      <meta name="description" content="About Me Page - Linda Benson Interiors, Interior Design Services" />
+      <title>Linda Benson Interiors | About Me</title>
+      <link rel="canonical" href="http://www.lindabensoninteriors.com/about" />
+    </Helmet>
     <div id="contentWrapper" className="aboutWrapper">
       <div id="bioPic">
           <GatsbyImage image={getImage(data.linda1.childImageSharp)} alt="Linda"/>

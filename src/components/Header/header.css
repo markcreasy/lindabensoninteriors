@@ -4,6 +4,10 @@
   text-align: center;
 }
 
+.site-header img{
+  width: 100%;
+}
+
 .site-header ul{
   list-style-type: none;
   margin: 0;
