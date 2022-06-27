@@ -13,7 +13,7 @@ const PortfolioPage = ({ data }) => {
       <meta charSet="utf-8" />
       <meta name="description" content="Porfolio Page - Linda Benson Interiors, Interior Design Services" />
       <title>Linda Benson Interiors | Portfolio</title>
-      <link rel="canonical" href="http://www.lindabensoninteriors.com/about" />
+      <link rel="canonical" href="http://www.lindabensoninteriors.com/portfolio" />
     </Helmet>
       <ProjectsGallery data={data}/>
 

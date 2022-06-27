@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { Helmet } from "react-helmet"
 import Layout from '../components/layout'
 import { graphql } from 'gatsby'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
@@ -7,6 +8,13 @@ const PressPage = ({data}) => {
 
   return (
     <Layout pageTitle="press">
+      <Helmet>
+        <html lang="en" amp />
+        <meta charSet="utf-8" />
+        <meta name="description" content="Press Spotlight Page - Linda Benson Interiors, Interior Design Services" />
+        <title>Linda Benson Interiors | Press</title>
+        <link rel="canonical" href="http://www.lindabensoninteriors.com/press" />
+      </Helmet>
       <div className="pressArticle">
         <div>
           <GatsbyImage className="pressPhoto" image={getImage(data.traditionalHomes.childImageSharp)} alt="Stately Homes By The Sea"/>

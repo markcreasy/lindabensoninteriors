@@ -169,7 +169,6 @@ main{
   margin: 70px 0 30px 0;
 }
 
-#contactPic img{
-  width:450px;
+#contactPic{
   border: 3px solid gray;
 }
