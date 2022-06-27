@@ -5,6 +5,8 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 
 const AboutPage = ({data}) => {
+  console.log("about debug");
+  console.log(data);
   return (
     <Layout pageTitle="about">
     <div id="contentWrapper" className="aboutWrapper">

@@ -4,6 +4,8 @@ import { graphql } from 'gatsby'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const PressPage = ({data}) => {
+  console.log("press debug");
+  console.log(data);
   return (
     <Layout pageTitle="press">
       <div className="pressArticle">

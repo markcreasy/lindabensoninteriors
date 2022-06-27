@@ -4,7 +4,8 @@ import ProjectsGallery from '../components/ProjectsGallery/projectsGallery.js'
 import { graphql } from 'gatsby'
 
 const PortfolioPage = ({ data }) => {
-
+  console.log("portfolio debug");
+  console.log(data);
   return (
     <Layout pageTitle="portfolio">
 
