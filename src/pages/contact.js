@@ -29,7 +29,7 @@ const ContactPage = ({data}) => {
 
 export const query = graphql`
   query {
-    feature: file(relativePath: { eq: "portfolio/rumsonTv/tv_room_1.jpg" }) {
+    feature: file(relativePath: { eq: "portfolio/statelyHomes/LINDA_006-1.jpg" }) {
       childImageSharp {
         gatsbyImageData
       }
