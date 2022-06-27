@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Layout from '../components/layout'
 
-const Contact = ({data}) => {
+const ContactPage = ({data}) => {
   console.log("contact debug");
   console.log(data);
   return (
