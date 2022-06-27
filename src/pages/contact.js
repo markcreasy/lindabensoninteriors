@@ -19,7 +19,7 @@ const ContactPage = ({data}) => {
       </div>
 
       <div id="contactPic">
-        <GatsbyImage image={getImage(data.contactPic.childImageSharp.gatsbyImageData)} alt="Linda's Work"/>
+        <GatsbyImage image={getImage(data.contactPic.childImageSharp)} alt="Linda's Work"/>
       </div>
   </div>
 
