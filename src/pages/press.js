@@ -4,7 +4,7 @@ import { graphql } from 'gatsby'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const PressPage = ({data}) => {
-  
+
   return (
     <Layout pageTitle="press">
       <div className="pressArticle">
@@ -20,8 +20,8 @@ const PressPage = ({data}) => {
      </div>
 
      <div className="pressArticle">
-      <div>
-        <GatsbyImage className="pressPhoto" image={getImage(data.kravet.childImageSharp)} alt="kravet.com"/>
+      <div id="kravetLogo">
+        <GatsbyImage image={getImage(data.kravet.childImageSharp)} alt="kravet.com"/>
       </div>
       <div>
         <p id="kravetP">
@@ -102,12 +102,12 @@ export const query = graphql`
   query {
     traditionalHomes: file(relativePath: { eq: "portfolio/statelyHomes/LINDA_006-1.jpg" }) {
       childImageSharp {
-        gatsbyImageData
+        gatsbyImageData(height:150, width:150)
       }
     }
     kravet: file(relativePath: { eq: "logos/kravet.jpg" }) {
       childImageSharp {
-        gatsbyImageData
+        gatsbyImageData(height:96, width:96)
       }
     }
     pjImg: file(relativePath: { eq: "logos/pj.jpg" }) {

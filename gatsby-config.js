@@ -8,13 +8,10 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sharp`,
       options: {
-        defaults: {
-          formats: [`auto`, `webp`],
-          placeholder: `dominantColor`,
-          quality: 100,
-          breakpoints: [1080, 1366, 1920],
-          backgroundColor: `transparent`,
-        }
+        // Defaults used for gatsbyImageData and StaticImage
+        defaults: {},
+        // Set to false to allow builds to continue on image errors
+        failOnError: false,
       }
     },
     `gatsby-transformer-sharp`,

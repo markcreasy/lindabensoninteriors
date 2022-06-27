@@ -4,6 +4,8 @@ import './projectsGallery.css'
 
 const ProjectsGallery = ({data}) => {
 
+  console.log(data);
+
   const projectNames = [
     {dir:"portfolio/mim2015",name:"Mansion in May 2014"},
     {dir:"portfolio/statelyHomes",name:"Stately Homes by the Sea 2013"},
@@ -24,14 +26,15 @@ const ProjectsGallery = ({data}) => {
   const projects = projectNames.map( (project) => {
     return {
       name: project.name,
-      photos: data.allFile.nodes.filter( img => img.relativeDirectory === project.dir)
+      thumbs: data.thumbs.nodes.filter( img => img.relativeDirectory === project.dir),
+      features: data.features.nodes.filter( img => img.relativeDirectory === project.dir)
     }
   });
 
   // current project state tracking
   const [currentProject, setCurrentProject] = useState(projects[0]);
   // current photo state tracking
-  const [currentPhoto, setCurrentPhoto] = useState(getImage(currentProject.photos[0]));
+  const [currentPhoto, setCurrentPhoto] = useState(getImage(currentProject.features[0]));
 
   const activeProject = (listItem) => {
     if(currentProject.name === listItem){
@@ -50,16 +53,20 @@ const ProjectsGallery = ({data}) => {
   }
 
   function ProjectImages(){
-    return currentProject.photos.map((photo) => {
-        const image = getImage(photo);
-        return (<button key={photo.relativePath} onClick={() => setCurrentPhoto(image)}><GatsbyImage className="thumb" image={image} alt={currentProject.name} /></button>);
+    return currentProject.thumbs.map((photo, index) => {
+      const featureImage = getImage(currentProject.features[index]);
+      const thumbImage = getImage(photo);
+      return (
+        <button key={photo.relativePath} onClick={() => setCurrentPhoto(featureImage)}>
+          <GatsbyImage className="thumb" image={thumbImage} alt={currentProject.name} />
+        </button>);
     })
   }
 
   function updateProject(projectName){
     const project = projects.filter(project => project.name === projectName)[0];
     setCurrentProject(project);
-    setCurrentPhoto(getImage(project.photos[0]));
+    setCurrentPhoto(getImage(project.features[0]));
   }
 
 
@@ -73,7 +80,7 @@ const ProjectsGallery = ({data}) => {
         <GatsbyImage key='featurePhoto' image={currentPhoto} alt={projects[0].name} />
       </div>
       <div className="thumbWrapper">
-        <ProjectImages key='projectImages' />
+        <ProjectImages key='projectImages'/>
       </div>
     </div>
   )

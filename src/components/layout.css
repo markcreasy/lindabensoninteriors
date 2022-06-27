@@ -119,6 +119,13 @@ main{
   text-align: right;
 }
 
+#kravetLogo .gatsby-image-wrapper{
+  width:150px;
+  height:150px;
+}
+
+
+
 .articlePhotos{
   display: flex;
   flex-direction: row;
