@@ -19,7 +19,7 @@ const ContactPage = ({data}) => {
       </div>
 
       <div id="contactPic">
-        <GatsbyImage image={getImage(data.contactPic.childImageSharp)} alt="Linda's Work"/>
+        <GatsbyImage image={getImage(data.feature.childImageSharp)} alt="Linda's Work"/>
       </div>
   </div>
 
@@ -29,7 +29,7 @@ const ContactPage = ({data}) => {
 
 export const query = graphql`
   query {
-    contactPic: file(relativePath: { eq: "portfolio/rumsonTv/tv_room_1.jpg" }) {
+    feature: file(relativePath: { eq: "portfolio/rumsonTv/tv_room_1.jpg" }) {
       childImageSharp {
         gatsbyImageData
       }
