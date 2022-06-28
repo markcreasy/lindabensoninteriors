@@ -1,54 +1,42 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby minimal starter
-</h1>
+# Linda Benson Interiors
+Linda Benson was my first ever freelance client and this site (Linda Benson Interiors)
+was the first real live website I ever designed, built, and deployed onto the internet.
+I worked with Linda to figure out what she envisioned for this website, and made UI/UX
+recommendations based on everything I had learned at RIT while earning my BS in IT.
 
-## 🚀 Quick start
+Around 10 years ago, I built this site with PHP, MySQL, and Javascript. What you're
+looking at now is an MVP rewrite using GatsbyJS. I chose GatsbyJS because React's
+website recommends GatsbyJS for static websites as it lets you use React components,
+but outputs pre-rendered HTML and CSS to guarantee the fastest load time.
 
-1.  **Create a Gatsby site.**
+The original Javascript has been replaced with React state management. The image
+serving has been optimized using the gatsby-plugin-image package so image sizes
+are dynamic and load times are as fast as possible. CSS floats and relative
+positioning have been replaced with CSS flex.
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+And finally, the entire site optimization, including SEO, has been tested using Google's
+Lighthouse tool: Performance 100/100, Accessibility 97/100, and Best Practices 100/100.
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+I will be working to make improvements moving forward including: Responsive CSS
+for a better tablet/mobile experience, updating image serving to be even more
+performant, updating file/folder structure/organization, implementing a database
+to store site information, and creating a backend to facilitate site/database
+content updates.
 
-2.  **Start developing.**
+## Technologies
 
-    Navigate into your new site’s directory and start it up.
+- GatsbyJS
+- ReactJS
+- gatsby-plugin-image
+- gatsby-plugin-sharp
+- gatsby-source-filesystem
+- CSS Flex
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+## Launch
 
-3.  **Open the code and start customizing!**
+Download the source code and from the project root directory run
+`npm install`
 
-    Your site is now running at http://localhost:8000!
+- To run the dev instance: `npm run develop`
 
-    Edit `src/pages/index.js` to see your site update in real-time!
-
-4.  **Learn more**
-
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-## 🚀 Quick start (Gatsby Cloud)
-
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
-
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
+- To test the production build (minified css/js): `npm run serve`
