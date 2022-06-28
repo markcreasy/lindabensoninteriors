@@ -23,6 +23,10 @@ performant, updating file/folder structure/organization, implementing a database
 to store site information, and creating a backend to facilitate site/database
 content updates.
 
+## Live Site: [lindabensoninteriors.com](https://lindabensoninteriors.com)
+- Gatsby Cloud
+- Cloudflare SSL
+
 ## Technologies
 
 - GatsbyJS
